@@ -6,4 +6,5 @@ export class StoreItem {
     price: number;
     inStock: number;
     quantity: number;
+    total: number;
 }

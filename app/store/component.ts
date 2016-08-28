@@ -12,6 +12,7 @@ import { AppComponent } from '../app.component';
 
 export class StoreComponent {
     storeItems: StoreItem[];
+    budget = 100;
 
     constructor(private storeService: StoreService) { }
 
@@ -20,12 +21,34 @@ export class StoreComponent {
             .subscribe(storeItems => this.storeItems = storeItems);
     }
 
+    updateItemCost(storeItem) {
+        return storeItem.total += storeItem.price;
+    }
+
     upQuantity(storeItem) {
         if(storeItem.inStock != 0) {
+            //Add to cart
             storeItem.quantity++;
+
+            //Update remaining stock
             storeItem.inStock--;
-            storeItem.total += storeItem.price;
+
+            //Update total cost for this item
+            this.updateItemCost(storeItem);
         }
     }
 
+    totalCost() {
+        let sum = 0;
+        if (this.storeItems) {
+        for (let storeItem of this.storeItems) {
+            sum += storeItem.total;
+            }
+        }
+        return sum;
+    }
+
+    updateBudget() {
+        return this.budget - this.totalCost();
+    }
 }

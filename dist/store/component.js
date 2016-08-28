@@ -14,18 +14,38 @@ var app_component_1 = require('../app.component');
 var StoreComponent = (function () {
     function StoreComponent(storeService) {
         this.storeService = storeService;
+        this.budget = 100;
     }
     StoreComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.storeService.getItems()
             .subscribe(function (storeItems) { return _this.storeItems = storeItems; });
     };
+    StoreComponent.prototype.updateItemCost = function (storeItem) {
+        return storeItem.total += storeItem.price;
+    };
     StoreComponent.prototype.upQuantity = function (storeItem) {
         if (storeItem.inStock != 0) {
+            //Add to cart
             storeItem.quantity++;
+            //Update remaining stock
             storeItem.inStock--;
-            storeItem.total += storeItem.price;
+            //Update total cost for this item
+            this.updateItemCost(storeItem);
         }
+    };
+    StoreComponent.prototype.totalCost = function () {
+        var sum = 0;
+        if (this.storeItems) {
+            for (var _i = 0, _a = this.storeItems; _i < _a.length; _i++) {
+                var storeItem = _a[_i];
+                sum += storeItem.total;
+            }
+        }
+        return sum;
+    };
+    StoreComponent.prototype.updateBudget = function () {
+        return this.budget - this.totalCost();
     };
     StoreComponent = __decorate([
         core_1.Component({
