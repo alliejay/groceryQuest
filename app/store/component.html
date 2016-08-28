@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <h1>Shop Around:</h1>
+    <div class="row">
+        <section class="itemCard col-md-3" *ngFor="let item of storeItems">
+            <h4 class="name">{{item.name | uppercase}}</h4>
+            <img class="thumbnail" [src]="item.pic">
+            <h6 class="price">{{item.price | currency: 'USD': true}}</h6>
+            <h6 class="stock">In Stock: {{item.inStock}}</h6>
+            <button (click)="upQuantity(item)">Add to Cart</button>
+            <h6><b>In Cart: </b> {{item.quantity}} | {{item.total | currency: 'USD': true}}</h6>
+        </section>
+    </div>
+</div>
