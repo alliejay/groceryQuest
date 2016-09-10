@@ -10,11 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var app_routes_1 = require('./app.routes');
+var http_1 = require('@angular/http');
+// In memory web API
+var angular2_in_memory_web_api_1 = require('angular2-in-memory-web-api');
+var in_memory_data_service_1 = require('./in-memory-data-service');
+// Components
 var app_component_1 = require('./app.component');
-var component_1 = require('./store/component');
-var component_2 = require('./cart/component');
-var component_3 = require('./list/component');
+var store_component_1 = require('./store/store.component');
+var cart_component_1 = require('./cart/cart.component');
+var list_component_1 = require('./list/list.component');
+var store_service_1 = require('./store/store.service');
+var app_routes_1 = require('./app.routes');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,16 +28,19 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
+                http_1.HttpModule,
+                angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService),
                 app_routes_1.routing
             ],
             declarations: [
                 app_component_1.AppComponent,
-                component_1.StoreComponent,
-                component_2.CartComponent,
-                component_3.ListComponent
+                store_component_1.StoreComponent,
+                cart_component_1.CartComponent,
+                list_component_1.ListComponent
             ],
             providers: [
-                app_routes_1.appRoutingProviders
+                app_routes_1.appRoutingProviders,
+                store_service_1.StoreService
             ],
             bootstrap: [
                 app_component_1.AppComponent

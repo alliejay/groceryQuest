@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { StoreItem } from './storeItem';
-import { StoreService } from './service';
+import { StoreService } from './store.service';
 import { AppComponent } from '../app.component';
 
 @Component({
     selector: "store",
-    templateUrl: 'app/store/component.html',
+    templateUrl: 'app/store/store.component.html',
     styleUrls: ['app/store/styles.css'],
     providers: [AppComponent]
 })

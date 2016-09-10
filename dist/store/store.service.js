@@ -9,23 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var store_service_1 = require('./store/store.service');
 var http_1 = require('@angular/http');
-var router_1 = require('@angular/router');
-var AppComponent = (function () {
-    function AppComponent() {
+require('rxjs/add/operator/toPromise');
+var StoreService = (function () {
+    function StoreService(http) {
+        this.http = http;
+        this.itemsUrl = 'app/storeItems';
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html',
-            styleUrls: ['app/app.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [store_service_1.StoreService, http_1.HTTP_PROVIDERS]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    StoreService.prototype.getItems = function () {
+        return this.http.get(this.itemsUrl)
+            .toPromise()
+            .then(function (response) { return response.json().data; })
+            .catch(this.handleError);
+    };
+    StoreService.prototype.handleError = function (error) {
+        console.error('An error occurred', error);
+        return Promise.reject(error.message || error);
+    };
+    StoreService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], StoreService);
+    return StoreService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.StoreService = StoreService;
+//# sourceMappingURL=store.service.js.map

@@ -1,8 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
 import {ModuleWithProviders} from "@angular/core";
-import { CartComponent } from './cart/component';
-import { StoreComponent } from './store/component';
-import { ListComponent } from './list/component';
+import { CartComponent } from './cart/cart.component';
+import { StoreComponent } from './store/store.component';
+import { ListComponent } from './list/list.component';
 
 const appRoutes: Routes = [
     { path: 'store',

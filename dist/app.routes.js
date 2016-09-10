@@ -1,23 +1,23 @@
 "use strict";
 var router_1 = require('@angular/router');
-var component_1 = require('./cart/component');
-var component_2 = require('./store/component');
-var component_3 = require('./list/component');
+var cart_component_1 = require('./cart/cart.component');
+var store_component_1 = require('./store/store.component');
+var list_component_1 = require('./list/list.component');
 var appRoutes = [
     { path: 'store',
-        component: component_2.StoreComponent,
+        component: store_component_1.StoreComponent,
         data: {
             title: 'Store'
         }
     },
     { path: 'cart',
-        component: component_1.CartComponent,
+        component: cart_component_1.CartComponent,
         data: {
             title: 'Shopping Cart'
         }
     },
     { path: 'list',
-        component: component_3.ListComponent,
+        component: list_component_1.ListComponent,
         data: {
             title: 'Shopping List'
         }

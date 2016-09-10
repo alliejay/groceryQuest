@@ -9,23 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var store_service_1 = require('./store/store.service');
-var http_1 = require('@angular/http');
-var router_1 = require('@angular/router');
-var AppComponent = (function () {
-    function AppComponent() {
+var ListComponent = (function () {
+    function ListComponent() {
     }
-    AppComponent = __decorate([
+    ListComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html',
-            styleUrls: ['app/app.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [store_service_1.StoreService, http_1.HTTP_PROVIDERS]
+            selector: "list",
+            template: "\n    <h1>List</h1>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ListComponent);
+    return ListComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ListComponent = ListComponent;
+//# sourceMappingURL=list.component.js.map

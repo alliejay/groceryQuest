@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var service_1 = require('./service');
+var store_service_1 = require('./store.service');
 var app_component_1 = require('../app.component');
 var StoreComponent = (function () {
     function StoreComponent(storeService) {
@@ -50,13 +50,13 @@ var StoreComponent = (function () {
     StoreComponent = __decorate([
         core_1.Component({
             selector: "store",
-            templateUrl: 'app/store/component.html',
+            templateUrl: 'app/store/store.component.html',
             styleUrls: ['app/store/styles.css'],
             providers: [app_component_1.AppComponent]
         }), 
-        __metadata('design:paramtypes', [service_1.StoreService])
+        __metadata('design:paramtypes', [store_service_1.StoreService])
     ], StoreComponent);
     return StoreComponent;
 }());
 exports.StoreComponent = StoreComponent;
-//# sourceMappingURL=component.js.map
+//# sourceMappingURL=store.component.js.map

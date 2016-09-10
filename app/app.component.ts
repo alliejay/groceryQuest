@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { StoreService } from './store/service';
+import { StoreService } from './store/store.service';
 import { HTTP_PROVIDERS } from '@angular/http'
 import { ROUTER_DIRECTIVES } from '@angular/router';
-import {StoreComponent} from "./store/component";
-
 
 @Component({
     selector: 'my-app',
