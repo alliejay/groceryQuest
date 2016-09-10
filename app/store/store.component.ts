@@ -1,24 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { StoreItem } from './storeItem';
 import { StoreService } from './store.service';
-import { AppComponent } from '../app.component';
+// import { AppComponent } from '../app.component';
 
 @Component({
     selector: "store",
     templateUrl: 'app/store/store.component.html',
-    styleUrls: ['app/store/styles.css'],
-    providers: [AppComponent]
+    styleUrls: ['app/store/styles.css']
 })
 
-export class StoreComponent {
+export class StoreComponent implements OnInit {
     storeItems: StoreItem[];
     budget = 100;
 
-    constructor(private storeService: StoreService) { }
+    constructor(
+        private router: Router,
+        private storeService: StoreService) { }
 
-    ngOnInit() {
-        this.storeService.getItems()
-            .subscribe(storeItems => this.storeItems = storeItems);
+    getItems(): void {
+        this.storeService.getItems().then(storeItems => this.storeItems = storeItems);
+    }
+
+    ngOnInit(): void {
+        this.getItems();
     }
 
     updateItemCost(storeItem) {

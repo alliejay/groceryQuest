@@ -1,5 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
-import {ModuleWithProviders} from "@angular/core";
+import { ModuleWithProviders } from "@angular/core";
+
 import { CartComponent } from './cart/cart.component';
 import { StoreComponent } from './store/store.component';
 import { ListComponent } from './list/list.component';
@@ -23,10 +24,6 @@ const appRoutes: Routes = [
             title: 'Shopping List'
         }
     }
-
-];
-
-export const appRoutingProviders: any[]  = [
 
 ];
 

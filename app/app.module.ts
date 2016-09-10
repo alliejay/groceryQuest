@@ -14,7 +14,7 @@ import { ListComponent } from './list/list.component';
 
 import { StoreService } from './store/store.service';
 
-import { routing, appRoutingProviders } from './app.routes';
+import { routing } from './app.routes';
 
 @NgModule({
     imports:      [
@@ -30,7 +30,6 @@ import { routing, appRoutingProviders } from './app.routes';
         ListComponent
     ],
     providers: [
-        appRoutingProviders,
         StoreService
     ],
     bootstrap:    [

@@ -39,7 +39,6 @@ var AppModule = (function () {
                 list_component_1.ListComponent
             ],
             providers: [
-                app_routes_1.appRoutingProviders,
                 store_service_1.StoreService
             ],
             bootstrap: [

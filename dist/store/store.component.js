@@ -9,17 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var store_service_1 = require('./store.service');
-var app_component_1 = require('../app.component');
+// import { AppComponent } from '../app.component';
 var StoreComponent = (function () {
-    function StoreComponent(storeService) {
+    function StoreComponent(router, storeService) {
+        this.router = router;
         this.storeService = storeService;
         this.budget = 100;
     }
-    StoreComponent.prototype.ngOnInit = function () {
+    StoreComponent.prototype.getItems = function () {
         var _this = this;
-        this.storeService.getItems()
-            .subscribe(function (storeItems) { return _this.storeItems = storeItems; });
+        this.storeService.getItems().then(function (storeItems) { return _this.storeItems = storeItems; });
+    };
+    StoreComponent.prototype.ngOnInit = function () {
+        this.getItems();
     };
     StoreComponent.prototype.updateItemCost = function (storeItem) {
         return storeItem.total += storeItem.price;
@@ -51,10 +55,9 @@ var StoreComponent = (function () {
         core_1.Component({
             selector: "store",
             templateUrl: 'app/store/store.component.html',
-            styleUrls: ['app/store/styles.css'],
-            providers: [app_component_1.AppComponent]
+            styleUrls: ['app/store/styles.css']
         }), 
-        __metadata('design:paramtypes', [store_service_1.StoreService])
+        __metadata('design:paramtypes', [router_1.Router, store_service_1.StoreService])
     ], StoreComponent);
     return StoreComponent;
 }());
