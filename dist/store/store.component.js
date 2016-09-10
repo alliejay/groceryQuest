@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var store_service_1 = require('./store.service');
-// import { AppComponent } from '../app.component';
 var StoreComponent = (function () {
     function StoreComponent(router, storeService) {
         this.router = router;
@@ -36,6 +35,7 @@ var StoreComponent = (function () {
             storeItem.inStock--;
             //Update total cost for this item
             this.updateItemCost(storeItem);
+            this.storeService.update(storeItem);
         }
     };
     StoreComponent.prototype.totalCost = function () {

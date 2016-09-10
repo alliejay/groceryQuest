@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 
 import { StoreItem } from './storeItem';
 import { StoreService } from './store.service';
-// import { AppComponent } from '../app.component';
 
 @Component({
     selector: "store",
@@ -41,6 +40,7 @@ export class StoreComponent implements OnInit {
 
             //Update total cost for this item
             this.updateItemCost(storeItem);
+            this.storeService.update(storeItem)
         }
     }
 

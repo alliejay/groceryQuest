@@ -15,11 +15,20 @@ var StoreService = (function () {
     function StoreService(http) {
         this.http = http;
         this.itemsUrl = 'app/storeItems';
+        this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     StoreService.prototype.getItems = function () {
         return this.http.get(this.itemsUrl)
             .toPromise()
             .then(function (response) { return response.json().data; })
+            .catch(this.handleError);
+    };
+    StoreService.prototype.update = function (storeItem) {
+        var url = this.itemsUrl + "/" + storeItem.id;
+        return this.http
+            .put(url, JSON.stringify(storeItem), { headers: this.headers })
+            .toPromise()
+            .then(function () { return storeItem; })
             .catch(this.handleError);
     };
     StoreService.prototype.handleError = function (error) {
