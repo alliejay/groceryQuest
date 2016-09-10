@@ -7,7 +7,8 @@
             <img class="thumbnail" [src]="item.pic">
             <h6 class="price">{{item.price | currency: 'USD': true}}</h6>
             <h6 class="stock">In Stock: {{item.inStock}}</h6>
-            <button (click)="upQuantity(item)">Add to Cart</button>
+            <button (click)="upQuantity(item)"> + </button>
+            <button (click)="downQuantity(item)"> - </button>
             <h6><b>In Cart: </b> {{item.quantity}} | {{item.total | currency: 'USD': true}}</h6>
         </section>
     </div>

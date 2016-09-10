@@ -1,0 +1,21 @@
+.itemCard {
+  background-color: lightblue;
+  display: inline-block;
+  float: left;
+  padding: 10px 20px;
+  margin: 8px;
+  width: 23%; }
+
+.thumbnail {
+  width: 100%; }
+
+.price {
+  float: left; }
+
+.stock {
+  float: right; }
+
+.name {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

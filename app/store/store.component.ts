@@ -38,9 +38,27 @@ export class StoreComponent implements OnInit {
             //Update remaining stock
             storeItem.inStock--;
 
-            //Update total cost for this item
+            //Update total cost for item
             this.updateItemCost(storeItem);
+
+            //Update api
             this.storeService.update(storeItem)
+        }
+    }
+
+    downQuantity(storeItem) {
+        if(storeItem.quantity != 0) {
+            //Remove from cart
+            storeItem.quantity--;
+
+            //Update remaining stock
+            storeItem.inStock++;
+
+            //Update total cost for item
+            this.updateItemCost(storeItem);
+
+            //Update api
+            this.storeService.update(storeItem);
         }
     }
 
