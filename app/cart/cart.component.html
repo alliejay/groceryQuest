@@ -1,14 +1,18 @@
-<h1>Cart</h1>
-<div *ngFor="let item of storeItems">
-    <div class="itemCard col-md-3" *ngIf="item.quantity != 0">
-        <h4 class="name">{{item.name | uppercase}}</h4>
-        <img class="thumbnail" [src]="item.pic">
-        <h6 class="price">{{item.price | currency: 'USD': true}}</h6>
-        <h6><b>In Cart: </b> {{item.quantity}} | {{item.total | currency: 'USD': true}}</h6>
+<div *ngIf="getCost() != 0">
+    <div *ngFor="let item of storeItems">
+        <div class="itemCard col-md-3" *ngIf="item.quantity != 0">
+            <h4 class="name">{{item.name | uppercase}}</h4>
+            <img class="thumbnail" [src]="item.pic">
+            <h6 class="price">{{item.price | currency: 'USD': true}}</h6>
+            <h6><b>In Cart: </b> {{item.quantity}} | {{item.total | currency: 'USD': true}}</h6>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2>{{getCost() | currency: 'USD': true}}</h2>
     </div>
 </div>
 
-<div>
-    <h2>{{getCost() | currency: 'USD': true}}</h2>
+<div *ngIf="getCost() === 0">
+    <h2>Your cart is currently empty.  Head over to the store to add items.</h2>
 </div>
-
