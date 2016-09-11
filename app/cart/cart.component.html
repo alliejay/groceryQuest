@@ -1,10 +1,16 @@
-<div *ngIf="getCost() != 0">
+<div class="row" *ngIf="getCost() != 0">
     <div *ngFor="let item of storeItems">
-        <div class="itemCard col-md-3" *ngIf="item.quantity != 0">
-            <h4 class="name">{{item.name | uppercase}}</h4>
-            <img class="thumbnail" [src]="item.pic">
-            <h6 class="price">{{item.price | currency: 'USD': true}}</h6>
-            <h6><b>In Cart: </b> {{item.quantity}} | {{item.total | currency: 'USD': true}}</h6>
+        <div class="itemLine col-md-12" *ngIf="item.quantity != 0">
+            <section class="itemPreview col-md-4">
+                <img class="thumbnail" [src]="item.pic">
+                <h4 class="name">{{item.name | uppercase}}</h4>
+            </section>
+            <section class="quantity col-md-4">
+                <h4>Quantity: {{item.quantity}} </h4>
+            </section>
+            <section class="total col-md-4">
+                <h4>Total: {{item.total | currency: 'USD': true}}</h4>
+            </section>
         </div>
     </div>
 

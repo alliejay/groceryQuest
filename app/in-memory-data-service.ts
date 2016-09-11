@@ -20,7 +20,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 pic: "img/pineapple.svg",
                 price: 2.5,
                 inStock: 15,
-                quantity: 0,
+                quantity: 1,
                 total: 0
             },
             {
@@ -30,7 +30,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 pic: "img/corn.svg",
                 price: 4,
                 inStock: 20,
-                quantity: 0,
+                quantity: 2,
                 total: 0
             },
             {

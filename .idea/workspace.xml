@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="bce45f0a-641c-4c97-9522-8b23ea9e0a75" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.css" afterPath="$PROJECT_DIR$/app/app.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.css.map" afterPath="$PROJECT_DIR$/app/app.component.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.html" afterPath="$PROJECT_DIR$/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.scss" afterPath="$PROJECT_DIR$/app/app.component.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles.css" afterPath="$PROJECT_DIR$/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles.css.map" afterPath="$PROJECT_DIR$/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles.scss" afterPath="$PROJECT_DIR$/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cart/cart.component.html" afterPath="$PROJECT_DIR$/app/cart/cart.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cart/style.css" afterPath="$PROJECT_DIR$/app/cart/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cart/style.css.map" afterPath="$PROJECT_DIR$/app/cart/style.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cart/style.scss" afterPath="$PROJECT_DIR$/app/cart/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/in-memory-data-service.ts" afterPath="$PROJECT_DIR$/app/in-memory-data-service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/in-memory-data-service.js" afterPath="$PROJECT_DIR$/dist/in-memory-data-service.js" />
     </list>
     <ignored path="brewQuest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,24 +30,14 @@
     <favorites_list name="brewQuest" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.50695825">
+    <splitter split-orientation="horizontal" split-proportion="0.63220674">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="store.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/store/store.component.html">
+          <file leaf-file-name="cart.component.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/cart/cart.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.component.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/app.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+                <state relative-caret-position="300">
+                  <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -58,21 +47,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/store/styles.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.component.scss" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/app.component.scss">
+          <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/cart/style.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="165">
-                  <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+                  <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -121,16 +100,16 @@
         <option value="$PROJECT_DIR$/app/budget/budget.component.ts" />
         <option value="$PROJECT_DIR$/app/store/store.service.ts" />
         <option value="$PROJECT_DIR$/app/store/store.component.ts" />
-        <option value="$PROJECT_DIR$/app/in-memory-data-service.ts" />
         <option value="$PROJECT_DIR$/app/cart/cart.component.ts" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app/store/styles.scss" />
         <option value="$PROJECT_DIR$/app/store/store.component.html" />
-        <option value="$PROJECT_DIR$/app/cart/style.scss" />
-        <option value="$PROJECT_DIR$/app/cart/cart.component.html" />
         <option value="$PROJECT_DIR$/styles.scss" />
         <option value="$PROJECT_DIR$/app/app.component.html" />
         <option value="$PROJECT_DIR$/app/app.component.scss" />
+        <option value="$PROJECT_DIR$/app/in-memory-data-service.ts" />
+        <option value="$PROJECT_DIR$/app/cart/cart.component.html" />
+        <option value="$PROJECT_DIR$/app/cart/style.scss" />
       </list>
     </option>
   </component>
@@ -311,7 +290,7 @@
       <workItem from="1472333164283" duration="16066000" />
       <workItem from="1472356436655" duration="266000" />
       <workItem from="1472395734883" duration="4689000" />
-      <workItem from="1473301228167" duration="25652000" />
+      <workItem from="1473301228167" duration="28170000" />
     </task>
     <task id="LOCAL-00001" summary="Added basic budgeting functionality">
       <created>1472400251751</created>
@@ -324,7 +303,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46673000" />
+    <option name="totallyTimeSpent" value="49191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -671,14 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/in-memory-data-service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/store/store.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -707,30 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/store/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cart/cart.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/cart/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/cart/cart.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -749,6 +696,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -757,18 +728,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.component.html">
+    <entry file="file://$PROJECT_DIR$/app/in-memory-data-service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="186">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.component.scss">
+    <entry file="file://$PROJECT_DIR$/app/cart/cart.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/cart/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
