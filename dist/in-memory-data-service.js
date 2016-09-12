@@ -21,7 +21,7 @@ var InMemoryDataService = (function () {
                 pic: "img/pineapple.svg",
                 price: 2.5,
                 inStock: 15,
-                quantity: 1,
+                quantity: 0,
                 total: 0
             },
             {
@@ -31,7 +31,7 @@ var InMemoryDataService = (function () {
                 pic: "img/corn.svg",
                 price: 4,
                 inStock: 20,
-                quantity: 2,
+                quantity: 0,
                 total: 0
             },
             {

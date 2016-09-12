@@ -1,4 +1,13 @@
 <div class="row" *ngIf="getCost() != 0">
+    <div class="row">
+        <nav class="row">
+            <ul>
+                <li>Item</li>
+                <li>Quantity</li>
+                <li>Cost</li>
+            </ul>
+        </nav>
+    </div>
     <div *ngFor="let item of storeItems">
         <div class="itemLine col-md-12" *ngIf="item.quantity != 0">
             <section class="itemPreview col-md-4">
