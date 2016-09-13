@@ -27,10 +27,15 @@
   text-align: center;
 }
 
-.total {
-  h4{
-    text-align: right;
-  }
+.totalText {
+  float: left;
 }
 
+.totalAmount {
+  float: right;
+}
 
+.fullTotal {
+  margin-top: 10px;
+  text-align: right;
+}

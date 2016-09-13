@@ -18,12 +18,13 @@
                 <h4>Quantity: {{item.quantity}} </h4>
             </section>
             <section class="total col-md-4">
-                <h4>Total: {{item.total | currency: 'USD': true}}</h4>
+                <h4 class="col-md-2 totalText">Total: </h4>
+                <h4 class="col-md-2 totalAmount"> {{item.total | currency: 'USD': true}}</h4>
             </section>
         </div>
     </div>
 
-    <div class="row">
+    <div class="col-md-12 fullTotal">
         <h2>{{getCost() | currency: 'USD': true}}</h2>
     </div>
 </div>

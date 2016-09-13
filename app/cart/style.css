@@ -20,7 +20,14 @@
 .quantity {
   text-align: center; }
 
-.total h4 {
+.totalText {
+  float: left; }
+
+.totalAmount {
+  float: right; }
+
+.fullTotal {
+  margin-top: 10px;
   text-align: right; }
 
 /*# sourceMappingURL=style.css.map */
