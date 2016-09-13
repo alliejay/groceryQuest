@@ -16,6 +16,8 @@
             </section>
             <section class="quantity col-md-4">
                 <h4>Quantity: {{item.quantity}} </h4>
+                <button (click)="upQuantity(item)"> + </button>
+                <button (click)="downQuantity(item)"> - </button>
             </section>
             <section class="total col-md-4">
                 <h4 class="col-md-2 totalText">Total: </h4>

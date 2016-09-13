@@ -38,5 +38,40 @@ export class CartComponent implements OnInit {
         return totalCost;
     }
 
+    updateItemCost(storeItem) {
+        return storeItem.total += storeItem.price;
+    }
+
+    upQuantity(storeItem) {
+        if(storeItem.inStock != 0) {
+            // Increase quantity
+            storeItem.quantity++
+
+            // Decrease stock
+            storeItem.inStock--;
+
+            // Update item cost
+            this.updateItemCost(storeItem);
+
+            // Update in memory api
+            this.storeService.update(storeItem);
+        }
+    }
+
+    downQuantity(storeItem) {
+        if(storeItem.inStock != 0) {
+            // Decrease quantity
+            storeItem.quantity--;
+
+            // Increase stock
+            storeItem.inStock++;
+
+            // Update item cost
+            this.updateItemCost(storeItem);
+
+            // Update in memory api
+            this.storeService.update(storeItem);
+        }
+    }
 }
 

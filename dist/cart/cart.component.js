@@ -35,6 +35,33 @@ var CartComponent = (function () {
         }
         return totalCost;
     };
+    CartComponent.prototype.updateItemCost = function (storeItem) {
+        return storeItem.total += storeItem.price;
+    };
+    CartComponent.prototype.upQuantity = function (storeItem) {
+        if (storeItem.inStock != 0) {
+            // Increase quantity
+            storeItem.quantity++;
+            // Decrease stock
+            storeItem.inStock--;
+            // Update item cost
+            this.updateItemCost(storeItem);
+            // Update in memory api
+            this.storeService.update(storeItem);
+        }
+    };
+    CartComponent.prototype.downQuantity = function (storeItem) {
+        if (storeItem.inStock != 0) {
+            // Decrease quantity
+            storeItem.quantity--;
+            // Increase stock
+            storeItem.inStock++;
+            // Update item cost
+            this.updateItemCost(storeItem);
+            // Update in memory api
+            this.storeService.update(storeItem);
+        }
+    };
     CartComponent = __decorate([
         core_1.Component({
             selector: 'cart',
