@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { StoreItem } from './storeItem';
@@ -11,6 +11,7 @@ import { StoreService } from './store.service';
 })
 
 export class StoreComponent implements OnInit {
+    @Input()
     storeItems: StoreItem[];
     budget = 100;
 
@@ -74,5 +75,9 @@ export class StoreComponent implements OnInit {
 
     updateBudget() {
         return this.budget - this.totalCost();
+    }
+
+    update(storeItem) {
+        this.storeService.update(storeItem);
     }
 }

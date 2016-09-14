@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { StoreItem } from '../store/storeItem';
@@ -11,6 +11,7 @@ import { StoreService } from '../store/store.service';
 })
 
 export class CartComponent implements OnInit {
+    @Input()
     storeItems: StoreItem[];
 
     constructor(
@@ -72,6 +73,10 @@ export class CartComponent implements OnInit {
             // Update in memory api
             this.storeService.update(storeItem);
         }
+    }
+
+    update(storeItem) {
+        this.storeService.update(storeItem);
     }
 }
 

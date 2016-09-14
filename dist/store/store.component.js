@@ -64,6 +64,13 @@ var StoreComponent = (function () {
     StoreComponent.prototype.updateBudget = function () {
         return this.budget - this.totalCost();
     };
+    StoreComponent.prototype.update = function (storeItem) {
+        this.storeService.update(storeItem);
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Array)
+    ], StoreComponent.prototype, "storeItems", void 0);
     StoreComponent = __decorate([
         core_1.Component({
             selector: "store",

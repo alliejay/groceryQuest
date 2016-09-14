@@ -62,6 +62,13 @@ var CartComponent = (function () {
             this.storeService.update(storeItem);
         }
     };
+    CartComponent.prototype.update = function (storeItem) {
+        this.storeService.update(storeItem);
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Array)
+    ], CartComponent.prototype, "storeItems", void 0);
     CartComponent = __decorate([
         core_1.Component({
             selector: 'cart',

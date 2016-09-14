@@ -11,7 +11,8 @@
                 <h4 class="name">{{item.name | uppercase}}</h4>
             </section>
             <section class="quantity col-md-4">
-                <h4>Quantity: {{item.quantity}} </h4>
+                <label><h4>Quantity: </h4></label>
+                <input (keyup.enter)="update(item)" [(ngModel)]="item.quantity" placeholder="{{item.quantity}}" />
                 <button (click)="upQuantity(item)"> + </button>
                 <button (click)="downQuantity(item)"> - </button>
             </section>
