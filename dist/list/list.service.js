@@ -9,27 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ListComponent = (function () {
-    function ListComponent() {
-        this.shoppingList = [];
+require('rxjs/add/operator/toPromise');
+var ListService = (function () {
+    function ListService() {
     }
-    ListComponent.prototype.addToList = function (listItem) {
-        listItem.title = listItem.title.trim();
-        if (!listItem.title) {
-            return;
-        }
-        this.shoppingList.push(listItem);
-    };
-    ListComponent.prototype.delete = function (listItem) {
-    };
-    ListComponent = __decorate([
-        core_1.Component({
-            selector: "list",
-            templateUrl: "app/list/list.component.html"
-        }), 
+    ListService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], ListComponent);
-    return ListComponent;
+    ], ListService);
+    return ListService;
 }());
-exports.ListComponent = ListComponent;
-//# sourceMappingURL=list.component.js.map
+exports.ListService = ListService;
+//# sourceMappingURL=list.service.js.map
