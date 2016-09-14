@@ -1,14 +1,17 @@
 /* Master Styles */
 h1 {
-  color: #021160;
+  color: #47A070;
   font-family: 'Cinzel', serif; }
 
 h2, h3 {
-  color: #00584F;
+  color: #146E3E;
   font-family: 'PT Sans Narrow', sans-serif; }
 
+h2 {
+  font-size: 2.8em; }
+
 body {
-  background-color: #E9F1F5;
+  background-color: #F1F8FB;
   margin: 2em; }
 
 a:hover {

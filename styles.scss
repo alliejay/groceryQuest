@@ -1,16 +1,25 @@
+//VARIABLES
+$bodyBG: #F1F8FB;
+$h1Color: #47A070;
+$h2h3Color: #146E3E;
+
 /* Master Styles */
 h1 {
-  color: #021160;
+  color: $h1Color;
   font-family: 'Cinzel', serif;
 }
 
 h2, h3 {
-  color: #00584F;
+  color: $h2h3Color;
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
+h2 {
+  font-size: 2.8em;
+}
+
 body {
-  background-color: #E9F1F5;
+  background-color: $bodyBG;
   margin: 2em;
 }
 

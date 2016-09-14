@@ -1,3 +1,7 @@
+//VARIABLES
+$bodyBG: #F1F8FB;
+$navBG: #9BBED1;
+
 h1{
   font-size: 4em;
   text-align: center;
@@ -12,8 +16,8 @@ ul {
   }
   li {
     font-family: 'PT Sans Narrow', sans-serif;
-    background-color: #9BBED1;
-    border: 3px solid #E9F1F5;
+    background-color: $navBG;
+    border: 3px solid $bodyBG;
     padding: 5px;
     text-align: center;
     transition: all 1s ease-in-out;

@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: "list",
-    template: `
-    <h1>List</h1>
-    `
+    templateUrl: "app/list/list.component.html"
 })
 
 export class ListComponent {}

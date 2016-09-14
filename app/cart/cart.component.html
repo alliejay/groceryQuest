@@ -1,11 +1,7 @@
 <div class="row" *ngIf="getCost() != 0">
-    <div class="row">
-        <nav class="row">
-            <ul>
-                <li>Item</li>
-                <li>Quantity</li>
-                <li>Cost</li>
-            </ul>
+    <div class="container-fluid">
+        <nav class="col-md-12">
+            <h2>Your Shopping Cart</h2>
         </nav>
     </div>
     <div *ngFor="let item of storeItems">
@@ -20,14 +16,14 @@
                 <button (click)="downQuantity(item)"> - </button>
             </section>
             <section class="total col-md-4">
-                <h4 class="col-md-2 totalText">Total: </h4>
-                <h4 class="col-md-2 totalAmount"> {{item.total | currency: 'USD': true}}</h4>
+                <h4 class="col-md-6 totalText">Total: </h4>
+                <h4 class="col-md-6 totalAmount"> {{item.total | currency: 'USD': true}}</h4>
             </section>
         </div>
     </div>
 
     <div class="col-md-12 fullTotal">
-        <h2>{{getCost() | currency: 'USD': true}}</h2>
+        <h2>Total: {{getCost() | currency: 'USD': true}}</h2>
     </div>
 </div>
 

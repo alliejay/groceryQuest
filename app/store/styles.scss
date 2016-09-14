@@ -1,5 +1,8 @@
+// Variables
+$itemBG: #CADFEB;
+
 .itemCard {
-  background-color: #9BBED1;
+  background-color: $itemBG;
   //border: 3px solid white;
   display: inline-block;
   float: left;
@@ -8,17 +11,33 @@
   width: 23%;
 }
 
+.genDetails {
+  background-color: #E1E1E1;
+  padding: 5px;
+  //.price {
+  //  float: left;
+  //}
+  //.stock {
+  //  float: right;
+  //}
+  .price, .stock {
+    display: inline-block;
+  }
+  .stock {
+    float: right;
+  }
+}
+
+.cartDetails {
+  float: left;
+  clear: both;
+}
+
 .thumbnail {
   width: 100%;
+  border: 5px solid #F1F1F1;
 }
 
-.price {
-  float: left;
-}
-
-.stock {
-  float: right;
-}
 
 .name {
   text-align: center;

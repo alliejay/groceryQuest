@@ -4,11 +4,15 @@
         <section class="itemCard col-md-3" *ngFor="let item of storeItems">
             <h4 class="name">{{item.name | uppercase}}</h4>
             <img class="thumbnail" [src]="item.pic">
-            <h6 class="price">{{item.price | currency: 'USD': true}}</h6>
-            <h6 class="stock">In Stock: {{item.inStock}}</h6>
-            <button (click)="upQuantity(item)"> + </button>
-            <button (click)="downQuantity(item)"> - </button>
-            <h6><b>In Cart: </b> {{item.quantity}} | {{item.total | currency: 'USD': true}}</h6>
+            <div class="genDetails">
+                <h6 class="price">{{item.price | currency: 'USD': true}} each</h6>
+                <h6 class="stock"><b>In Stock: {{item.inStock}}</b></h6>
+            </div>
+            <div class="cartDetails">
+                <h6><b>In Cart: </b> {{item.quantity}} | {{item.total | currency: 'USD': true}}</h6>
+                <button (click)="upQuantity(item)"> + </button>
+                <button (click)="downQuantity(item)"> - </button>
+            </div>
         </section>
     </div>
 </div>

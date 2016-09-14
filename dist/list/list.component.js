@@ -15,7 +15,7 @@ var ListComponent = (function () {
     ListComponent = __decorate([
         core_1.Component({
             selector: "list",
-            template: "\n    <h1>List</h1>\n    "
+            templateUrl: "app/list/list.component.html"
         }), 
         __metadata('design:paramtypes', [])
     ], ListComponent);

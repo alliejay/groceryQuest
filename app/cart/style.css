@@ -1,5 +1,13 @@
+nav {
+  border-bottom: 1px solid lightgrey;
+  margin: 15px 0; }
+
+.cartListTitles {
+  list-style-type: none;
+  text-align: center; }
+
 .itemLine {
-  background-color: #9BBED1;
+  background-color: #CADFEB;
   display: block;
   float: left;
   margin: 10px 0 5px 0;
@@ -19,12 +27,17 @@
 
 .quantity {
   text-align: center; }
+  .quantity h4, .quantity button {
+    display: inline-block;
+    vertical-align: middle; }
 
 .totalText {
-  float: left; }
+  float: left;
+  text-align: center; }
 
 .totalAmount {
-  float: right; }
+  float: right;
+  text-align: right; }
 
 .fullTotal {
   margin-top: 10px;
