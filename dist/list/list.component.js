@@ -9,25 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var list_service_1 = require('./list.service');
+var in_memory_data_list_service_1 = require('./in-memory-data-list-service');
 var ListComponent = (function () {
-    function ListComponent() {
-        this.shoppingList = [];
+    function ListComponent(listService) {
+        this.listService = listService;
     }
-    ListComponent.prototype.addToList = function (listItem) {
-        listItem.title = listItem.title.trim();
-        if (!listItem.title) {
+    ListComponent.prototype.addToList = function (title) {
+        var _this = this;
+        if (!title) {
             return;
         }
-        this.shoppingList.push(listItem);
+        this.listService.create(title)
+            .then(function (listItem) {
+            _this.listItems.push(listItem);
+        });
     };
-    ListComponent.prototype.delete = function (listItem) {
+    ListComponent.prototype.getItems = function () {
+        var _this = this;
+        this.listService.getItems().then(function (listItems) { return _this.listItems = listItems; });
+    };
+    ListComponent.prototype.ngOnInit = function () {
+        this.getItems();
     };
     ListComponent = __decorate([
         core_1.Component({
             selector: "list",
-            templateUrl: "app/list/list.component.html"
+            templateUrl: "app/list/list.component.html",
+            providers: [in_memory_data_list_service_1.InMemoryDataListService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [list_service_1.ListService])
     ], ListComponent);
     return ListComponent;
 }());

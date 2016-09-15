@@ -1,17 +1,17 @@
-/* Master Styles */
 h1 {
   color: #47A070;
-  font-family: 'Cinzel', serif; }
+  font-family: "Cinzel", serif; }
 
 h2, h3 {
   color: #146E3E;
-  font-family: 'PT Sans Narrow', sans-serif; }
+  font-family: "PT Sans Narrow", sans-serif; }
 
 h2 {
   font-size: 2.8em; }
 
 body {
   background-color: #F1F8FB;
+  font-family: "Catamaran", sans-serif;
   margin: 2em; }
 
 a:hover {

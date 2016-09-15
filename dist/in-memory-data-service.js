@@ -47,19 +47,6 @@ var InMemoryDataService = (function () {
         ];
         return { storeItems: storeItems };
     };
-    InMemoryDataService.prototype.createDb2 = function () {
-        var shoppingListItems = [
-            {
-                id: 1,
-                title: "Grapes"
-            },
-            {
-                id: 2,
-                title: "Italian Bread"
-            }
-        ];
-        return { shoppingListItems: shoppingListItems };
-    };
     return InMemoryDataService;
 }());
 exports.InMemoryDataService = InMemoryDataService;

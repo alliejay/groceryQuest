@@ -1,8 +1,9 @@
 <h2>List</h2>
 
-<ul *ngFor="let item of shoppingList">
+<ul *ngFor="let item of listItems">
     <li>
-        <span>{{item}}</span>
+        <span>{{item.id}}</span> -
+        <span>{{item.title}}</span>
         <button (click)="delete(item); $event.stopPropagation()"> x </button>
     </li>
 </ul>

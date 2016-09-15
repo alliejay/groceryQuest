@@ -1,17 +1,13 @@
-//VARIABLES
-$bodyBG: #F1F8FB;
-$h1Color: #47A070;
-$h2h3Color: #146E3E;
+@import "_variables";
 
-/* Master Styles */
 h1 {
   color: $h1Color;
-  font-family: 'Cinzel', serif;
+  font-family: $h1Font;
 }
 
 h2, h3 {
   color: $h2h3Color;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: $h2h3Font;
 }
 
 h2 {
@@ -20,6 +16,7 @@ h2 {
 
 body {
   background-color: $bodyBG;
+  font-family: $bodyFont;
   margin: 2em;
 }
 
@@ -27,5 +24,3 @@ a:hover {
   text-decoration: none;
 }
 
-
-//font-family: 'Catamaran', sans-serif;

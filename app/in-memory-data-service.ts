@@ -47,17 +47,4 @@ export class InMemoryDataService implements InMemoryDbService {
         return {storeItems};
     }
 
-    createDb2() {
-        let shoppingListItems = [
-            {
-                id: 1,
-                title: "Grapes"
-            },
-            {
-                id: 2,
-                title: "Italian Bread"
-            }
-        ];
-        return {shoppingListItems};
-    }
 }

@@ -21,6 +21,7 @@ var store_component_1 = require('./store/store.component');
 var cart_component_1 = require('./cart/cart.component');
 var list_component_1 = require('./list/list.component');
 var store_service_1 = require('./store/store.service');
+var list_service_1 = require('./list/list.service');
 var app_routes_1 = require('./app.routes');
 var AppModule = (function () {
     function AppModule() {
@@ -41,7 +42,8 @@ var AppModule = (function () {
                 list_component_1.ListComponent
             ],
             providers: [
-                store_service_1.StoreService
+                store_service_1.StoreService,
+                list_service_1.ListService
             ],
             bootstrap: [
                 app_component_1.AppComponent

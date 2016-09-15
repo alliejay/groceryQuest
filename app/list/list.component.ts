@@ -1,23 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// import { Router } from '@angular/router';
 
 import { ListItem } from './listItem';
+import { ListService } from './list.service';
+import { InMemoryDataListService } from './in-memory-data-list-service';
 
 @Component({
     selector: "list",
-    templateUrl: "app/list/list.component.html"
+    templateUrl: "app/list/list.component.html",
+    providers: [InMemoryDataListService]
 })
 
-export class ListComponent {
+export class ListComponent implements OnInit {
     listItems: ListItem[];
-    shoppingList = [];
 
-    addToList(listItem: ListItem): void {
-        listItem.title = listItem.title.trim();
-        if (!listItem.title) { return; }
-        this.shoppingList.push(listItem);
+    constructor(
+        private listService: ListService) { }
+
+    addToList(title: string): void {
+        if (!title) { return; }
+        this.listService.create(title)
+            .then(listItem => {
+                this.listItems.push(listItem)
+            })
     }
 
-    delete(listItem: ListItem): void {
-
+    getItems(): void {
+        this.listService.getItems().then(listItems => this.listItems = listItems);
     }
+
+    ngOnInit(): void {
+        this.getItems();
+    }
+
+
 }

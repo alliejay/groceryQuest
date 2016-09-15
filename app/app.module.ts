@@ -14,6 +14,7 @@ import { CartComponent } from './cart/cart.component';
 import { ListComponent } from './list/list.component';
 
 import { StoreService } from './store/store.service';
+import { ListService } from './list/list.service';
 
 import { routing } from './app.routes';
 
@@ -32,7 +33,8 @@ import { routing } from './app.routes';
         ListComponent
     ],
     providers: [
-        StoreService
+        StoreService,
+        ListService
     ],
     bootstrap:    [
         AppComponent
